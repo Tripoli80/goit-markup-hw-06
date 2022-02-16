@@ -875,6 +875,7 @@ button {
   margin-bottom: 10px;
 }
 .modal-input-box {
+ 
   position: relative;
 }
 .modal-form-input {
@@ -919,7 +920,9 @@ button {
   padding: 16px;
   resize: none;
 }
-
+.modal-form{
+  
+}
 .modal-form-input.modal-form-text {
 }
 .modal-lable {
@@ -937,7 +940,10 @@ button {
 }
 
 .modal-item-check {
+  display: flex;
+  justify-content: center;
   padding-top: 10px;
+   
 }
 
 .modal-check-lable {
