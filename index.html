@@ -374,11 +374,12 @@
     </main>
     <!-- Подвал -->
     <footer class="footer ">
-      <div class="container ">
-        <ul class=" list footer-container">
-          <li class="footer-container-item">
-              <a href="#" class="logo"><span class="first">Web</span><span class="second">Studio</span></a>
-              <div class="footer-contact">
+      <div class="container footer-container ">
+       
+          
+              
+            <div class="footer-container-item">
+                <a href="#" class="logo"><span class="first">Web</span><span class="second">Studio</span></a>
               <ul class="footer-list">
                   <li class="footer-item"><address class="address contact"><a href="mailto:info@devstudio.com">г. Киев, пр-т Леси Украинки, 26</a></address></li>
                   <li class="footer-item"><a href="mailto:info@devstudio.com" class="contact">info@devstudio.com</a></li>
@@ -386,8 +387,8 @@
                     <a href="tel:+380961111111" class="contact">
                       +38 096 111 11 11</a></li>
                        </ul> 
-                  </li> 
-           <li class="footer-container-item">
+                  </div> 
+           <div class="footer-container-item">
               <h3 class="footer-we ">ПРИСОЕДИНЯЙТЕСЬ</h3>
                 
                   
@@ -426,28 +427,30 @@
                   </a>
                   </li> 
                 </ul>
-            </li>
-           <li class="footer-container-item">
+            </div>
+           <div class="footer-container-item">
 
               <h3 class="footer-we ">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h3>
                 
                   <div class="online">
                    <form class="online-form" >
-                   <input type="mail" class="online-form-input" placeholder="E-mail" name="online-mail" type="mail">
-                   </form>
-                   <button class="online-form-button"> <span class="online-form-txt">Подписаться</span> 
-                     <svg class="online-form-icon">
-                  <use href="./images/icons.svg#icon-modal-fly"> </use>
-                  </svg> 
-                 </button>
+                       <input type="mail" class="online-form-input" placeholder="E-mail" name="online-mail" type="mail">
+                       <button class="online-form-button"> <span class="online-form-txt">Подписаться</span> 
+                          <svg class="online-form-icon">
+                        <use href="./images/icons.svg#icon-modal-fly"> </use>
+                        </svg> 
+                     </button>
+                  </form>
+                 
                  </div>
-            </li>
-       </ul>
-      </div>
+            </div>
+          </div>
+     
    
-      </div>
+    
 
     </footer>
+    <!-- МОДАЛКА -->
      <div class="backdrop is-hidden" data-modal>
        <div class="modal-container">
             <p class="name-modal-window">Оставьте свои данные, мы вам перезвоним</p>
@@ -488,26 +491,24 @@
                     </div>
                 </div>
 
-                <div class="modal-item modal-item-check ">
-                    
-                    <div class="modal-input-box">
+                    <div class="modal-input-chek">
                           <input type="checkbox" class="modal-form-check" id="modal-form-check" name="modal-form-check" placeholder="">
                           <label for="modal-form-check" class="modal-check-lable">Соглашаюсь 
                           с рассылкой и принимаю &nbsp;<a href="#" > <span class="legal">Условия договора</span> </a></label>
                     </div>
                     
-                  </div>
+                
 
 
                 <button type="submit" class="modal-button"><span class="herro-button-txt">Отправить</span></button>
         
         </form>
 
-        <span class="closed-modal-box" data-modal-close>
+        <button type="button" class="closed-modal-box" data-modal-close>
           <svg class="modal-closed">
                   <use href="./images/icons.svg#icon-modal-closed"> </use>
                   </svg>
-        </span>
+        </button>
         <!-- <button  class="closed-modal" data-modal-close >закрыть</button> -->
       </div>      
     </div>

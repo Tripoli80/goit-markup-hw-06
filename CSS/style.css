@@ -48,6 +48,7 @@ button {
   /* float: left; */
   /* display: none; */
 }
+input[type="checkbox"],
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -563,7 +564,7 @@ button {
   line-height: 1.71;
   font-weight: 400;
 }
-.footer-contact {
+.footer-list {
   margin-top: 20px;
 }
 .footer .logo {
@@ -632,6 +633,9 @@ button {
 .online {
   display: flex;
   margin-top: 20px;
+}
+.online-form {
+  display: flex;
 }
 .online-form-input {
   padding-left: 16px;
@@ -852,7 +856,7 @@ button {
   pointer-events: none;
 }
 .modal-container {
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -865,18 +869,24 @@ button {
   font-weight: 700;
   display: block;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 1.15em;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-primary);
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
-.modal-item {
-  margin-bottom: 10px;
+
+.modal-item + .modal-item {
+  margin-top: 10px;
 }
+.modal-input-chek {
+  margin-top: 20px;
+}
+
 .modal-input-box {
- 
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 .modal-form-input {
   width: 100%;
@@ -916,12 +926,12 @@ button {
 }
 
 .modal-form-text {
+  display: block;
   height: 120px;
   padding: 16px;
   resize: none;
 }
-.modal-form{
-  
+.modal-form {
 }
 .modal-form-input.modal-form-text {
 }
@@ -942,8 +952,7 @@ button {
 .modal-item-check {
   display: flex;
   justify-content: center;
-  padding-top: 10px;
-   
+  margin-top: 20px;
 }
 
 .modal-check-lable {
@@ -956,9 +965,7 @@ button {
   color: var(--text-secondary);
   letter-spacing: 0.03em;
 }
-input[type="checkbox"] {
-  display: none;
-}
+
 .modal-check-lable::before {
   content: "";
   margin-right: 5px;
@@ -972,6 +979,11 @@ input[type="checkbox"] {
   transition-duration: var(--time);
   transition-timing-function: var(--functional-cubic);
 }
+.modal-form-check:hover + .modal-check-lable::before,
+.modal-form-check:focus + .modal-check-lable::before {
+  border: 2px solid var(--theme-color);
+}
+
 .modal-form-check:checked + .modal-check-lable::before {
   background-color: var(--theme-color);
   background-image: url(../images/accept.svg);
@@ -1010,7 +1022,6 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
   justify-content: center;
-
   cursor: pointer;
   position: absolute;
   width: 30px;
@@ -1019,6 +1030,7 @@ input[type="checkbox"] {
   right: 8px;
   border-radius: 50%;
   border: solid 1px;
+  background-color: transparent;
   border-color: var(--social-color-primary);
 }
 .modal-closed {
